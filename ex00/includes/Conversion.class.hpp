@@ -14,18 +14,23 @@
 # define CONVERSION_CLASS_HPP
 
 # include <iostream>
+# include <exception>
 
 class Conversion
 {
 	private :
-				int		_int;
-				char	_char;
-				double	_double;
-				float	_float;
-				
+			const std::string	_target;
+			std::string	_type;
 	public :
 			Conversion(const std::string av);
 			~Conversion(void);
+
+			std::string	checkVar(void) const;
+
+			class StringEmpty : public std::exception
+			{
+				const char *what() const throw() {return "Need not empty argument.";}
+			};
 };
 
 #endif

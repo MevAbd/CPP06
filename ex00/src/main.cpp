@@ -19,13 +19,13 @@ int	main(int ac, char **av)
 		std::cout << "My program needs one argument." << std::endl;
 		return (1);
 	}
-//	try
-//	{
+	try
+	{
 		Conversion conv(av[1]);
-//	}
-//	catch (std::exception &e)
-//	{
-//		std::cout << e.what() << std::endl;
-//	}
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 	return (0);
 }
