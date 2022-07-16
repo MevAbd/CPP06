@@ -6,7 +6,7 @@
 /*   By: malbrand <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 02:30:53 by malbrand          #+#    #+#             */
-/*   Updated: 2022/07/16 15:27:29 by malbrand         ###   ########.fr       */
+/*   Updated: 2022/07/16 16:41:48 by malbrand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,11 +220,11 @@ Conversion &Conversion::operator=(const Conversion &rhs)
 {
 	std::cout << "Conversion Assignation operator called" << std::endl;
 	if (this == &rhs)
-		return *this;
+		return (*this);
 	this->_type = rhs.getType();
 	this->_char = rhs.getChar();
 	this->_int = rhs.getInt();
 	this->_float = rhs.getFloat();
 	this->_double = rhs.getDouble();
-	return *this;
+	return (*this);
 }
